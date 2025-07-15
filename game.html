@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daverse Challenge</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0d0d;
+      color: #00ffff;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff6f00;
+    }
+    input, button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+    }
+    input {
+      width: 200px;
+    }
+    button {
+      background: #ff6f00;
+      color: white;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 40px;
+      font-size: 1.3rem;
+      color: #ffffff;
+    }
+    .zodiac {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #00ffff;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚔️ Can You Beat Me?</h1>
+  <p>Enter your birthday and face your Daverse truth.</p>
+  <input type="date" id="birthdate">
+  <button onclick="revealChallenge()">Reveal</button>
+
+  <div class="result" id="resultBox"></div>
+
+  <script>
+    const signs = [
+      { sign: "Capricorn ♑", start: "01-01", end: "01-19", msg: "You're wise and calm, but stuck in routine,\nTo beat me, break rules — think like a machine." },
+      { sign: "Aquarius ♒", start: "01-20", end: "02-18", msg: "Your mind is wild, ideas free,\nTo match me, mix logic with energy." },
+      { sign: "Pisces ♓", start: "02-19", end: "03-20", msg: "You're deep and dreamy, heart full of flame,\nTo reach me, turn dreams into game." },
+      { sign: "Aries ♈", start: "03-21", end: "04-19", msg: "You're bold and fast, first to go,\nBut to beat me, learn to slow." },
+      { sign: "Taurus ♉", start: "04-20", end: "05-20", msg: "You're strong and grounded, calm like stone,\nTo pass my level, think beyond your zone." },
+      { sign: "Gemini ♊", start: "05-21", end: "06-20", msg: "You're smart and quick, ideas that spark,\nTo rival me, dive deeper in the dark." },
+      { sign: "Cancer ♋", start: "06-21", end: "07-22", msg: "You're loyal and sharp, with hidden power,\nBut rise above fear to truly flower." },
+      { sign: "Leo ♌", start: "07-23", end: "08-22", msg: "You're fire and fame, the boldest knight,\nBut outsmart me? You’ll need more than might." },
+      { sign: "Virgo ♍", start: "08-23", end: "09-22", msg: "You plan and perfect, your logic's clean,\nBut I think sideways — I'm off the screen." },
+      { sign: "Libra ♎", start: "09-23", end: "10-22", msg: "You balance the world, you think with grace,\nTo match me, move faster — set the pace." },
+      { sign: "Scorpio ♏", start: "10-23", end: "11-21", msg: "You're deep and dark, with thoughts that sting,\nBut I'm the storm — you're just the ring." },
+      { sign: "Sagittarius ♐", start: "11-22", end: "12-21", msg: "You chase truth, shoot thoughts like arrows,\nTo rival me, sharpen your shadows." },
+      { sign: "Capricorn ♑", start: "12-22", end: "12-31", msg: "You're wise and calm, but stuck in routine,\nTo beat me, break rules — think like a machine." }
+    ];
+
+    function revealChallenge() {
+      const birthdate = document.getElementById("birthdate").value;
+      if (!birthdate) {
+        document.getElementById("resultBox").innerHTML = "Enter your birthdate first!";
+        return;
+      }
+
+      const [year, month, day] = birthdate.split("-");
+      const formatted = `${month}-${day}`;
+
+      const signObj = signs.find(s => formatted >= s.start && formatted <= s.end);
+      
+      const zodiac = signObj ? signObj.sign : "Unknown";
+      const msg = signObj ? signObj.msg : "I can't read your stars. You must be from Daverse itself.";
+
+      document.getElementById("resultBox").innerHTML = `
+        <div class="zodiac">${zodiac}</div>
+        <div class="line">${msg.replace(/\n/g, '<br>')}</div>
+        <br><button onclick="resetGame()">Try Again</button>
+      `;
+    }
+
+    function resetGame() {
+      document.getElementById("birthdate").value = "";
+      document.getElementById("resultBox").innerHTML = "";
+    }
+  </script>
+</body>
+</html>

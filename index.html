@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daverse: The Verse</title>
+  <style>
+    :root {
+      --primary-color: cyan;
+      --accent-color: orange;
+      --bg-color: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
+      --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: #ffffff;
+      font-family: var(--font-main);
+      text-align: center;
+      padding: 5vw;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .tagline {
+      color: var(--accent-color);
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      max-width: 800px;
+      margin: auto;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    .dare-btn {
+      display: inline-block;
+      margin-top: 3rem;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background-color: transparent;
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s ease;
+      border-radius: 8px;
+    }
+
+    .dare-btn:hover {
+      background-color: var(--primary-color);
+      color: #0f0c29;
+      box-shadow: 0 0 20px var(--primary-color);
+    }
+  </style>
+</head>
+<body>
+  <h1>🌌 Daverse: The Verse 🌌</h1>
+  <div class="tagline">A universe from the mind of Daksh Singh</div>
+  <p>
+    Welcome to the Daverse — a reality built from thought, imagination, invention, and philosophy.
+    Alchemy, pressure weapons, chip implants, and laws of science mixed with dreams... this is a realm
+    where nothing is impossible unless you stop thinking.
+  </p>
+  <p>
+    This is only the beginning. Enter if you’re ready to see the world as Daksh sees it.
+  </p>
+
+  <a href="home.html" class="dare-btn">Do you dare?</a>
+</body>
+</html>

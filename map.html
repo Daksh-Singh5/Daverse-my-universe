@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daverse Map</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0e0e0e;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: cyan;
+      margin-bottom: 40px;
+    }
+    .zone {
+      border: 2px solid cyan;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 700px;
+      background: #1a1a1a;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .zone:hover {
+      background: #222;
+      transform: scale(1.02);
+    }
+    .zone a {
+      color: orange;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .zone p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #ccc;
+    }
+    #secret-btn {
+      display: none;
+      text-align: center;
+      margin-top: 40px;
+    }
+    #secret-btn a {
+      padding: 14px 30px;
+      background-color: red;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+    #secret-zone {
+      display: none;
+      margin-top: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      border: 2px dashed red;
+      padding: 20px;
+      background: #1c1c1c;
+    }
+    #secret-zone a {
+      color: lime;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    #secret-zone p {
+      color: #aaa;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌌 Daverse Map</h1>
+
+  <div class="zone" onclick="zoneClicked('alchemy')">
+    <a href="alchemy.html" target="_blank">Alchemy Sector</a>
+    <p>Where science and sorcery merge. Rules break, possibilities don’t.</p>
+  </div>
+
+  <div class="zone" onclick="zoneClicked('thought')">
+    <a href="thoughts.html" target="_blank">Thought Zone</a>
+    <p>All those deep wild ideas, inventions, and theories that defy logic.</p>
+  </div>
+
+  <div class="zone" onclick="zoneClicked('invention')">
+    <a href="inventions.html" target="_blank">Invention Lab</a>
+    <p>Tools, weapons, gadgets — real or unreal — made from pure imagination.</p>
+  </div>
+
+  <div class="zone" onclick="zoneClicked('elements')">
+    <a href="elements.html" target="_blank">Element Core</a>
+    <p>Control over fire, water, air — all in a system shaped by your rules.</p>
+  </div>
+
+  <!-- Secret Button -->
+  <div id="secret-btn">
+    <a href="#" onclick="revealSecret()">☣️ Unlock Secret Zone</a>
+  </div>
+
+  <<!-- Hidden Secret Zone -->
+<div id="secret-zone" class="zone">
+  <a href="game.html" target="_blank">🎮 The Forbidden Lab</a>
+  <p>A hidden sector filled with failed experiments, ancient tech, and secrets that even Daverse fears. Only the curious ever find it.</p>
+</div>
+
+
+  <script>
+    const clickedZones = new Set();
+
+    function zoneClicked(zoneName) {
+      clickedZones.add(zoneName);
+      checkAllZones();
+    }
+
+    function checkAllZones() {
+      const totalZones = 4;
+      if (clickedZones.size === totalZones) {
+        document.getElementById('secret-btn').style.display = 'block';
+      }
+    }
+
+    function revealSecret() {
+      document.getElementById('secret-zone').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
