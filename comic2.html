@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Chosen One - Comic by Daksh Singh</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .title {
+      padding: 2rem;
+      font-size: 2.5rem;
+      color: #ff6600;
+    }
+    .subtitle {
+      font-size: 1rem;
+      color: #aaa;
+    }
+    .comic-viewer {
+      margin: 2rem auto;
+      max-width: 260px;
+    }
+    .comic-image {
+      width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      border: 2px solid #333;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+    }
+    .nav-buttons {
+      margin-top: 1rem;
+    }
+    .nav-buttons button {
+      padding: 0.5rem 1rem;
+      margin: 0 1rem;
+      font-size: 1rem;
+      background-color: #ff6600;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+    .nav-buttons button:disabled {
+      background-color: #555;
+      cursor: default;
+    }
+    .full-story-link {
+      display: inline-block;
+      margin: 2rem auto;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      background-color: #00cccc;
+      color: #0d0d0d;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .full-story-text {
+  display: none;
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: left;
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #f0f0f0;  /* <-- Add this to ensure text color is visible */
+  line-height: 1.6;  /* <-- For better spacing */
+}
+.full-story-text {
+  display: none;
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: left;
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #333;
+  box-shadow: 0 0 20px rgba(0, 204, 204, 0.4);
+  color: #e0e0e0;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+
+.full-story-text p {
+  text-indent: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.full-story-text p:first-child {
+  font-size: 1.5rem;
+  color: #00cccc;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 10px #00cccc;
+  text-indent: 0;
+  margin-bottom: 2rem;
+}
+
+.show-text {
+  display: block !important;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.comic-image {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+.fade-out {
+  opacity: 0;
+}
+.fade-in {
+  opacity: 1;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="title">The Chosen One</div>
+  <div class="subtitle">A Daverse Comic by Daksh Singh</div>
+
+  <div class="comic-viewer">
+    <img id="comicImage" class="comic-image" src="The comeback/ChatGPT Image Jul 22, 2025, 08_52_25 PM.png" alt="Comic Page 1">
+    <div class="nav-buttons">
+      <button id="pvBtn" disabled>pvious</button>
+      <button id="nextBtn">Next</button>
+    </div>
+  </div><br>
+
+  <a href="#" id="readTextLink" class="full-story-link">Read Full Story as Text</a>
+  <br>
+  <a href="home.html" style="
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #00ffe1;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+" onmouseover="this.style.backgroundColor='#00ccc1'" onmouseout="this.style.backgroundColor='#00ffe1'">
+  ← Go Back
+</a>
+
+  <div id="fullStory" class="full-story-text">
+    <!-- You can paste the full comic story text here -->
+    <pre>
+
+🌌 "Essence Reclaimed"
+
+A Story by Daksh Singh
+
+
+---
+
+⚫ Part 1: The Fall
+
+Once, I was powerful.
+
+I held the essence of healing, light, matter, gravity —
+Everything the universe runs on… flowed through me.
+
+Until I was poisoned.
+
+No warning. No goodbye.
+I collapsed.
+
+And when I woke up —
+Everything was gone.
+
+Not just my strength…
+My powers had been scattered into other people, split and reshaped.
+One took my light.
+One carried my healing.
+Another stole the ability to bend gravity.
+Each one living with my gifts — unknowingly or not.
+
+I had nothing left.
+Except a fragment — a sliver of my original self.
+Matter control. Some resistance to pain. A little flight.
+
+But even shards can be sharp.
+
+
+---
+
+🌱 Part 2: The First Return
+
+I started the journey to reclaim what was mine.
+The first was a girl — a young village doctor. Quiet. Kind.
+She cared for her dying mother, using my healing powers in subtle ways —
+feeding her without food, easing pain without medicine.
+
+I found them.
+
+And I didn't demand anything.
+
+Instead, I gave.
+I lent her my healing essence — just for a while —
+and it nearly broke me.
+Pain screamed through my body, but I did it.
+
+Her mother lived.
+
+I left with only the echo of that power.
+
+
+---
+
+🩸 Part 3: The Hollow One
+
+Next came a man who took healing from others, leaving them in pain just to feel alive.
+When I found him, he tried to drain me.
+
+But I knew my power better.
+I dodged every strike.
+Then I talked to him. Calm.
+No fighting. No rage.
+
+He broke down.
+I didn't defeat him — I understood him.
+
+And just like that…
+Another essence returned.
+
+
+---
+
+🌞 Part 4: The Light That Lied
+
+Then came a twist.
+While seeking the light power, I met someone… too familiar.
+A man like me — but opposite.
+He didn’t control matter. He bent antimatter.
+
+He didn’t want to help.
+He wanted to test me.
+
+And he did.
+He stole pieces of energy during our conversation.
+He was stronger… smarter… colder.
+
+
+---
+
+🩹 Part 5: Lifesteal and Rivalry
+
+I faced another: a rival who had the rest of my abilities.
+Instead of a fight to the death — he offered me time.
+
+> "You're too weak.
+One week. Return stronger… or don’t return at all."
+
+
+
+I took the challenge.
+
+
+---
+
+🌀 Part 6: The Week of Training
+
+Day 1 — I met the Gravity Wielder.
+Before he could help me…
+He was struck down by someone who claimed to protect “balance.”
+
+The rest of the week, I trained.
+Meditated. Reclaimed.
+Studied the flow of pain and healing.
+The way energy feels.
+I started to understand the patterns of the universe.
+
+
+---
+
+💥 Part 7: The Final Fight
+
+I returned.
+
+Nullon — my rival — waited for me.
+We clashed.
+The world shattered around us as matter and antimatter collided.
+
+At first, I held my own.
+But then he went all out.
+
+He mutated the powers he stole.
+He warped light into heat.
+Turned healing into decay.
+Bent gravity into chaos.
+
+I fell.
+
+Bruised. Beaten. On the edge of death.
+
+
+---
+
+🕰 Part 8: The Ascension
+
+But I didn’t get up angry.
+I didn’t scream.
+
+I sat up — calm.
+And the universe paused.
+
+Not metaphorically.
+Literally.
+
+Time stopped.
+The wind froze.
+Even light forgot to move.
+
+> I had unlocked the final essence:
+Control over space and time itself.
+
+
+
+Not just power…
+I touched ChronoGenesis — the core thread of creation.
+
+I rewound damage.
+Split timelines.
+Froze my enemy in mid-blink.
+
+And as I stood, reborn from stillness, I said:
+
+> “I woke up broken.
+Now I break reality.”
+
+
+
+
+---
+
+🌠 Epilogue: Essence Reforged
+
+I didn’t destroy Nullon.
+I paused him.
+
+Forever, or until I decide otherwise.
+
+The world began to move again.
+But now it moved because I let it.
+
+I reclaimed not just my powers…
+I reclaimed the meaning of them.
+
+And now?
+
+I watch over time itself.
+
+Not as a god.
+Not as a hero.
+
+But as the one who remembers what it cost to become whole.
+
+
+---
+
+[THE END — or maybe, the beginning.]
+
+</pre>
+  </div>
+
+  <script>
+    const comicPages = ['The comeback/ChatGPT Image Jul 22, 2025, 08_52_25 PM.png','The comeback/ChatGPT Image Jul 22, 2025, 09_07_04 PM.png','The comeback/ChatGPT Image Jul 22, 2025, 09_07_54 PM.png','The comeback/ChatGPT Image Jul 22, 2025, 10_38_26 PM.png','The comeback/ChatGPT Image Jul 22, 2025, 10_40_09 PM.png','The comeback/ChatGPT Image Jul 22, 2025, 10_48_53 PM.png','The comeback/ChatGPT Image Jul 24, 2025, 07_23_15 PM.png','The comeback/ChatGPT Image Jul 24, 2025, 07_23_25 PM.png','The comeback/ChatGPT Image Jul 24, 2025, 07_23_31 PM.png','The comeback/ChatGPT Image Jul 24, 2025, 07_23_35 PM.png']; // Add your comic page image names here
+    let currentPage = 0;
+    const partTwoLink = document.getElementById('partTwoLink');
+
+    const comicImage = document.getElementById('comicImage');
+    const pvBtn = document.getElementById('pvBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const readTextLink = document.getElementById('readTextLink');
+    const fullStory = document.getElementById('fullStory');
+
+    pvBtn.addEventListener('click', () => {
+      if (currentPage > 0) {
+        currentPage--;
+        updateComic();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentPage < comicPages.length - 1) {
+        currentPage++;
+        updateComic();
+      }
+    });
+
+    readTextLink.addEventListener('click', (e) => {
+  e.preventDefault();  // <-- FIXED
+  fullStory.style.display = (fullStory.style.display === 'block') ? 'none' : 'block';
+});
+
+
+    function updateComic() {
+      comicImage.src = comicPages[currentPage];
+      pvBtn.disabled = currentPage === 0;
+      nextBtn.disabled = currentPage === comicPages.length - 1;
+    }
+    function updateComic() {
+  comicImage.classList.add('fade-out');
+
+  setTimeout(() => {
+    comicImage.src = comicPages[currentPage];
+  }, 250); // Halfway fade out
+
+  setTimeout(() => {
+    comicImage.classList.remove('fade-out');
+    comicImage.classList.add('fade-in');
+  }, 300); // Begin fade in after src change
+
+  setTimeout(() => {
+    comicImage.classList.remove('fade-in'); // Clean up class after animation
+  }, 800);
+
+  pvBtn.disabled = currentPage === 0;
+  nextBtn.disabled = currentPage === comicPages.length - 1;
+  // Show Part Two link only when on the last page
+if (currentPage === comicPages.length - 1) {
+  partTwoLink.style.display = 'inline-block';
+} else {
+  partTwoLink.style.display = 'none';
+}
+
+}
+
+
+
+
+  </script>
+
+</body>
+</html>

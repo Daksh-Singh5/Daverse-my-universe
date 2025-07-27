@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daverse: TopaSuit & G-Modules</title>
   <style>
     body {
@@ -46,6 +46,22 @@
       font-size: 1rem;
       color: #ccc;
     }
+
+    a.button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #00ffe1;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    a.button:hover {
+      background-color: #00ccc1;
+    }
   </style>
 </head>
 <body>
@@ -65,7 +81,7 @@
   <div class="idea-card">
     <div class="idea-title">💡 Gemini-Sidekick Neural Link</div>
     <div class="idea-desc">
-      A neural device injected into the bloodstream. It travels naturally and binds to specific brain regions by reading bio-signals. Once attached, it links wirelessly with Gemini-Sidekick and grows smarter over time, adapting to your thinking. Controlled by thoughts, emotions, and intent — no surgery needed. It also includes a discreet earpiece for feedback, music, or assistant communication.
+      A neural device injected into the bloodstream. It travels naturally and binds to specific brain regions by reading bio-signals. Once attached, it links wirelessly with Gemini-Sidekick and grows smarter over time, adapting to your thinking. Controlled by thoughts, emotions, and intent — no surgery needed.
     </div>
   </div>
 
@@ -104,19 +120,6 @@
     </div>
   </div>
 
-  <a href="home.html" style="
-    display: inline-block;
-    margin-top: 30px;
-    padding: 12px 24px;
-    background-color: #00ffe1;
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-  " onmouseover="this.style.backgroundColor='#00ccc1'" onmouseout="this.style.backgroundColor='#00ffe1'">
-    ← Back to Gateway
-  </a>
-
+  <a href="home.html" class="button">← Back to Gateway</a>
 </body>
 </html>
